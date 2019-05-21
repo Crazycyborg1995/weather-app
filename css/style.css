@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.4;
+}
+header{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.bg-fullscreen{
+  height: 100vh;
+  background: url('../img/bg-img.jpg') no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20vh 40vh 40vh;
+}
+.bg-fullscreen > *:not(:last-child){
+  margin: 1em;
+}
+.location-info{
+  align-self: center;
+  font-family: 'Raleway',sans-serif;
+}
+.location-info .date{
+  color: #FFD45F;
+  font-size: 1.2em;
+}
+.location-info .place{
+  font-size: 3em;
+}
+.weather-card{
+  width: 70%;
+  min-height: 120px;
+  background: rgba(0, 0, 0, 0.3);
+  color: rgba(255, 255, 255, 0.8);
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.weather-card > *{
+  width: 20%;
+  text-transform: capitalize;
+}
+.weather-card p{
+  font-size: 1.3em;
+}
+.weather-card > *:not(:last-child){
+  border-right: 1px dotted #fff;
+}
+/* .weather-card div:after:not(:last-child){
+    content: "";
+    color:black;
+    border-right:1px solid black;
+    font-size: 10px;
+} */
+
+
+.converter{
+  border-radius: 5px;
+  border: 2px solid #FFD45F;
+  padding: 0.5em 1em;
+  background: transparent;
+  color: #FFD45F;
+  outline: none;
+  cursor: pointer;
+  text-align: center;
+  height: 3em;
+}
+.converter:hover{
+  background: #FFD45F;
+  color: #fff;
+}
+
+@media (max-width:60em){
+  .weather-card p{
+    font-size: 1.1em;
+  }
+  .weather-card{
+    width: 100%;
+  }
+}
+@media (max-width:30em){
+  .weather-card p{
+    font-size: 0.9em;
+  }
+}
